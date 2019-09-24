@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: demo
+spec:
+  selector:
+    matchLabels:
+      app: demo-template # has to match .spec.template.metadata.labels
+  serviceName: "demo"
+  replicas: 2 # by default is 1
+  template:
+    metadata:
+      labels:
+        app: demo-template # has to match .spec.selector.matchLabels
+    spec:
+      terminationGracePeriodSeconds: 10
+      imagePullSecrets:
+      - name: devenablement-workshop-pull-secret # or your pull secret
+      containers:
+      - name: small-test
+        image: registry.ford.com/jpotte46/small-test:0.0.1
+        ports:
+        - containerPort: 80
+          name: web
+        volumeMounts:
+        - name: vol1
+          mountPath: /mnt/vol1
+  volumeClaimTemplates:
+  - metadata:
+      name: vol1
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "nfs" # customize this for your env
+      resources:
+        requests:
+          storage: 1Mi
