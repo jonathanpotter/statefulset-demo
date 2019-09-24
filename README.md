@@ -14,7 +14,7 @@ In fact, a `PersistentVolumeClaim` that is created by a `volumeClaimTemplate` of
 
 Stateful set pods also keep their same name although their IP addresses will change. This is useful for stateful technologies that write data to a specific location using a DNS name and expect that data to persist at that location.
 
-# Exercise
+## Exercise
 
 You'll need a Kubernetes namespace. Create a pull secret in your namespace with access to `registry.ford.com` naming the pull secret the same as in `statefulset.yaml` or modifying the file to match the name of your pull secret.
 
@@ -72,7 +72,7 @@ oc rsh pod/demo-0
 
 Stateful Sets are also useful when you need a client to be routed to the same pod for each call. Stateful technologies like Casandra, MongoDB, and others require this functionality. Create a headless service to expose the individual pod replicas by name.
 
-# Exercise
+## Exercise
 
 Create the service. See that the service contains the current endpoint IP addresses. Check that you can reach a specific pod using a DNS name derived from the pod hostname and subdomain provided by the headless service.
 
