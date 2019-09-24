@@ -18,9 +18,10 @@ spec:
       - name: devenablement-workshop-pull-secret # or your pull secret
       containers:
       - name: small-test
-        image: registry.ford.com/jpotte46/small-test:0.0.1
+        #image: registry.ford.com/jpotte46/small-test:0.0.1
+        image: registry.ford.com/jpotte46/springboot-hello-world:0.0.1
         ports:
-        - containerPort: 80
+        - containerPort: 8080
           name: web
         volumeMounts:
         - name: vol1
