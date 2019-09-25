@@ -15,7 +15,7 @@ spec:
     spec:
       terminationGracePeriodSeconds: 10
       imagePullSecrets:
-      - name: devenablement-workshop-pull-secret # or your pull secret
+      - name: devenablement-workshop-pull-secret # use your pull secret
       containers:
       - name: small-test
         image: registry.ford.com/jpotte46/springboot-hello-world:0.0.1
@@ -33,4 +33,4 @@ spec:
       storageClassName: "nfs" # customize this for your env
       resources:
         requests:
-          storage: 1Mi
+          storage: 1Mi # customize this for your env
