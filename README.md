@@ -144,3 +144,7 @@ oc rsh pod/demo-2
   # Hello in demo-2.
   exit
 ```
+
+# Resources
+[Kubernetes Docs](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
+[Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/)
