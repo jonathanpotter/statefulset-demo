@@ -146,5 +146,5 @@ oc rsh pod/demo-2
 ```
 
 # Resources
-[Kubernetes Docs](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
-[Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/)
+- [Kubernetes Docs](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
+- [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/)
