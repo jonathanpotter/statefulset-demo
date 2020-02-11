@@ -18,7 +18,7 @@ Stateful set pods also keep their same name although their IP addresses will cha
 
 ### Exercise
 
-You'll need a Kubernetes namespace. Create a pull secret in your namespace with access to `registry.ford.com` naming the pull secret the same as in `statefulset.yaml` or modifying the file to match the name of your pull secret.
+You'll need a Kubernetes namespace. Create a pull secret in your namespace with access to `registry.company.com` naming the pull secret the same as in `statefulset.yaml` or modifying the file to match the name of your pull secret.
 
 ```
 # Create a namespace for objects
